@@ -1,0 +1,22 @@
+# Architecture and Design Report
+
+## 1. Object Detection Module
+The system utilizes YOLOv8 (`yolov8n.pt`) for standard object detection. The single-stage detection architecture provides optimal real-time inference speed while maintaining robust bounding box accuracy. 
+
+## 2. Object Tracking Module
+DeepSORT (Deep Simple Online and Realtime Tracking) is utilized for tracking logic. It implements an appearance descriptor and matches bounding boxes based on visual embeddings combined with motion cues. This mitigates tracking drift and occlusion issues.
+
+## 3. ID Consistency Logistics
+Consistency is managed via:
+- **Kalman Filtering:** Models kinematic movements across state predictions.
+- **Appearance Features:** Re-identifies objects via cosine distance metrics on extracted feature maps.
+- **Maximum Age Buffer:** Stores un-detectable object IDs in a local buffer array before expiring them, solving brief intersection issues.
+
+## 4. Known Edge Cases
+- **Dense Crowd Clustering:** Continuous occlusion limits individual appearance embeddings.
+- **Frame Rate Drops:** Extreme jitter or FPS drops desynchronizes the tracking prediction curves.
+
+## 5. Future Scalability 
+- Implementing ByteTrack mapping for low-confidence threshold pairings.
+- Incorporating TensorRT batch execution models to stabilize inference latency.
+- Retraining YOLOv8 models onto domain-specific datasets (e.g. sporting balls, designated uniforms).
