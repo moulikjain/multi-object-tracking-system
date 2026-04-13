@@ -2,7 +2,17 @@
 
 A robust Python application for real-time multi-object detection and tracking in sports and event footage.
 
-**Original Video Source:** [YouTube Shorts Link](https://youtube.com/shorts/x45N8Ar-0hA?si=7l4acmhKxLoqK_Ys)
+**Original Video Source:** [YouTube Shorts Link](https://youtube.com/shorts/x45N8Ar-0hA?si=7l4acmhKxLoqK_Ys)  
+**Complete Tutorial:** [Google Drive Tutorial](https://drive.google.com/file/d/1CB_3u4wQsOYJBpPueCXfPyWhw4sTK_FV/view?usp=drivesdk)
+
+## Output Showcase
+Below are examples of the tracker natively maintaining unique IDs across frames and displaying telemetry data.
+
+<div align="center">
+  <img src="screenshot1.jpg" width="30%" alt="Tracking Screenshot 1">
+  <img src="screenshot2.jpg" width="30%" alt="Tracking Screenshot 2">
+  <img src="screenshot3.jpg" width="30%" alt="Tracking Screenshot 3">
+</div>
 
 ## Architecture Highlights
 - **Detection**: YOLOv8 via the `ultralytics` framework.
