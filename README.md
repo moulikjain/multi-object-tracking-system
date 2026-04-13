@@ -2,6 +2,8 @@
 
 A robust Python application for real-time multi-object detection and tracking in sports and event footage.
 
+**Original Video Source:** [YouTube Shorts Link](https://youtube.com/shorts/x45N8Ar-0hA?si=7l4acmhKxLoqK_Ys)
+
 ## Architecture Highlights
 - **Detection**: YOLOv8 via the `ultralytics` framework.
 - **Tracking**: DeepSORT implementation for persistent ID assignment and tracking across frames.
